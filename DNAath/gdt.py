@@ -255,7 +255,7 @@ def main():
     audio = binary_to_audio_file(binary_data_decrypted)
     
     # saves
-    with open(os.path.join("decrypted_audio", "decrypted_audio.wav"), "wb") as f:
+    with open("decrypted_audio_audio2.wav", "wb") as f:
         f.write(audio.read())
     decrypted_file.write(binary_data_decrypted)
     end = time()

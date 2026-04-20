@@ -21,7 +21,7 @@ def set_globals():
     global rounds_no
     global decryption_key
     # it is better to be odd random
-    rounds_no = random.randrange(3, 5, 2)
+    rounds_no = 3
     decryption_key = ""
 
 
@@ -312,7 +312,7 @@ def dna_get(binary_string, key):
 def main():
     global decryption_key
 
-    audio_path="D:\DNAath\original_audio\leadpipe-91195.wav"
+    audio_path=r"D:\Encrypted_Decrypted_DNA\DNAath\original_audio\audio2.wav"
     with open(audio_path, 'rb') as f:
         binary_data = f.read()
     original_file = open(destination_path_original_bin, "w")   
@@ -365,7 +365,7 @@ def main():
     audio = binary_to_audio_file(binary_data_reconstructed)
 
     # save and show decrypted image
-    with open(os.path.join("encrypted_audio", "encrypted_audio.wav"), "wb") as f:
+    with open("encrypted_audio_audio2.wav", "wb") as f:
         f.write(audio.read())
     
 
